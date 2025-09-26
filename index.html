@@ -58,7 +58,7 @@
     .bar > i { position:absolute; inset:0; transform: scaleX(var(--v)); transform-origin:left; background: var(--primary); }
     .bar-label { display:flex; justify-content:space-between; font-size:13px; color:var(--muted); }
 
-    /* Story grid (Text links, Video rechts) */
+    /* Story grid */
     .story-grid { display:grid; grid-template-columns: 1fr 1fr; gap:20px; align-items:start; }
     .story-video { position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:12px; }
     .story-video iframe { position:absolute; top:0; left:0; width:100%; height:100%; border:0; }
@@ -154,12 +154,19 @@
           <p class="lead" style="font-size:14px;">Daten: <a href="https://www.unhcr.org/stateless-people" target="_blank">UNHCR</a>, <a href="https://www.amnesty.org/en/what-we-do/refugees-asylum-seekers-and-migrants/" target="_blank">Amnesty International</a>.</p>
         </div>
 
-        <!-- Infobox (ohne Video) -->
+        <!-- Infobox -->
         <div class="card" style="margin-top:20px; background:#f1f5f9; border-left:5px solid var(--primary);">
           <h3 style="margin-top:0;">Haben Staatenlose keine Rechte?</h3>
           <p>Menschenrechte gelten universell – auch ohne Staatsangehörigkeit. Doch in der Praxis fehlt oft die rechtliche Anerkennung durch einen Staat, der diese Rechte garantiert. Das bedeutet: Zugang zu <strong>Bildung</strong>, <strong>Gesundheit</strong>, <strong>Arbeit</strong> oder <strong>Rechtsschutz</strong> ist massiv eingeschränkt.</p>
           <p><strong>Beispiel:</strong> Die <em>Rohingya</em> in Myanmar wurden durch das Staatsangehörigkeitsgesetz von 1982 staatenlos. Seither sind ihre Rechte stark eingeschränkt: Bewegungsfreiheit, Zugang zu Bildung, Gesundheitsversorgung und Arbeit sind massiv limitiert. 
           <a href="https://www.unhcr.org/rohingya-emergency" target="_blank">Quelle: UNHCR</a></p>
+        </div>
+
+        <!-- Eingefügtes Bild -->
+        <div style="margin:20px 0; text-align:center;">
+          <img src="assets/no-identity-no-rights.png" 
+               alt="Illustration: Person mit Pass darf durch Tür, Person ohne Pass wird von Schranke mit Schild 'No Identity, No Rights' aufgehalten"
+               style="max-width:100%; height:auto; border-radius:12px; box-shadow:0 4px 10px rgba(0,0,0,.1);" />
         </div>
       </div>
     </section>
