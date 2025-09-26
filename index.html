@@ -21,7 +21,6 @@
     html { scroll-behavior: smooth; }
     body { margin:0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial; color: var(--ink); background: var(--bg); }
 
-    /* Header */
     header { position: sticky; top:0; z-index:50; background: rgba(248,250,252,0.95); border-bottom:1px solid #e5e7eb; backdrop-filter: saturate(140%) blur(6px); }
     .nav { max-width: var(--maxw); margin:0 auto; display:flex; align-items:center; gap:16px; padding:12px 20px; }
     .brand { font-weight:800; color:var(--primary); font-family: Montserrat, sans-serif; }
@@ -31,7 +30,6 @@
     .btn-primary:hover { background:#084bb0; }
     .btn-primary:active { transform: translateY(1px); }
 
-    /* Hero */
     .hero { background: linear-gradient(180deg, #f4f7ff 0%, #ffffff 100%); }
     .hero-inner { max-width: var(--maxw); margin:0 auto; padding: 72px 20px; display:grid; grid-template-columns: 1fr 1fr; gap:32px; align-items:center; }
     .super { font-weight:800; font-size: clamp(28px, 6vw, 52px); line-height:1.1; font-family: Montserrat, sans-serif; }
@@ -40,7 +38,6 @@
     .passport-top { display:flex; justify-content:space-between; font-size:14px; }
     .avatar { width:64px; height:64px; border-radius:10px; background:#dbe7ff; display:grid; place-items:center; font-weight:800; color:#1e3a8a; margin-right:12px; }
 
-    /* Sections */
     section { padding: 64px 20px; }
     .wrap { max-width: var(--maxw); margin:0 auto; }
     .h2 { font-family: Montserrat, sans-serif; font-weight:800; font-size: clamp(24px, 4vw, 36px); margin-bottom:10px; }
@@ -58,16 +55,13 @@
     .bar > i { position:absolute; inset:0; transform: scaleX(var(--v)); transform-origin:left; background: var(--primary); }
     .bar-label { display:flex; justify-content:space-between; font-size:13px; color:var(--muted); }
 
-    /* Story grid */
     .story-grid { display:grid; grid-template-columns: 1fr 1fr; gap:20px; align-items:start; }
     .story-video { position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:12px; }
     .story-video iframe { position:absolute; top:0; left:0; width:100%; height:100%; border:0; }
 
-    /* Footer */
     footer { padding:40px 20px; background:#0b1020; color:#e5e7eb; }
     footer a { color:#c7d2fe; }
 
-    /* Responsive */
     @media (max-width: 900px) {
       .hero-inner { grid-template-columns: 1fr; text-align:center; }
     }
@@ -126,22 +120,10 @@
       <div class="wrap">
         <h2 class="h2">Warum ist das wichtig?</h2>
         <div class="grid-4">
-          <div class="stat">
-            <strong>≥4,4 Mio.</strong>
-            <span>offiziell staatenlos<br><a href="https://www.unhcr.org/stateless-people" target="_blank">UNHCR</a></span>
-          </div>
-          <div class="stat">
-            <strong>~10 Mio.</strong>
-            <span>geschätzt weltweit<br><a href="https://www.unhcr.org/us/stateless-united-states" target="_blank">UNHCR</a></span>
-          </div>
-          <div class="stat">
-            <strong>0</strong>
-            <span>Rechte sind sicher,<br>wenn Identität nicht anerkannt wird.<br><a href="https://www.amnesty.org/en/latest/campaigns/2016/05/stateless-people-in-the-dominican-republic/" target="_blank">Amnesty</a></span>
-          </div>
-          <div class="stat">
-            <strong>3 Bereiche</strong>
-            <span>Bildung, Arbeit, Gesundheit<br><a href="https://www.unhcr.org/dach/de/themen/staatenlosigkeit" target="_blank">UNHCR</a></span>
-          </div>
+          <div class="stat"><strong>≥4,4 Mio.</strong><span>offiziell staatenlos<br><a href="https://www.unhcr.org/stateless-people" target="_blank">UNHCR</a></span></div>
+          <div class="stat"><strong>~10 Mio.</strong><span>geschätzt weltweit<br><a href="https://www.unhcr.org/us/stateless-united-states" target="_blank">UNHCR</a></span></div>
+          <div class="stat"><strong>0</strong><span>Rechte sind sicher,<br>wenn Identität nicht anerkannt wird.<br><a href="https://www.amnesty.org/en/latest/campaigns/2016/05/stateless-people-in-the-dominican-republic/" target="_blank">Amnesty</a></span></div>
+          <div class="stat"><strong>3 Bereiche</strong><span>Bildung, Arbeit, Gesundheit<br><a href="https://www.unhcr.org/dach/de/themen/staatenlosigkeit" target="_blank">UNHCR</a></span></div>
         </div>
 
         <div class="card" style="margin-top:20px;">
@@ -156,15 +138,12 @@
 
         <!-- Infobox mit Bild rechts -->
         <div class="card" style="margin-top:20px; background:#f1f5f9; border-left:5px solid var(--primary); display:flex; gap:20px; align-items:center; flex-wrap:wrap;">
-          <!-- Text links -->
           <div style="flex:1 1 300px; min-width:240px;">
             <h3 style="margin-top:0;">Haben Staatenlose keine Rechte?</h3>
             <p>Menschenrechte gelten universell – auch ohne Staatsangehörigkeit. Doch in der Praxis fehlt oft die rechtliche Anerkennung durch einen Staat, der diese Rechte garantiert. Das bedeutet: Zugang zu <strong>Bildung</strong>, <strong>Gesundheit</strong>, <strong>Arbeit</strong> oder <strong>Rechtsschutz</strong> ist massiv eingeschränkt.</p>
             <p><strong>Beispiel:</strong> Die <em>Rohingya</em> in Myanmar wurden durch das Staatsangehörigkeitsgesetz von 1982 staatenlos. Seither sind ihre Rechte stark eingeschränkt: Bewegungsfreiheit, Zugang zu Bildung, Gesundheitsversorgung und Arbeit sind massiv limitiert. 
             <a href="https://www.unhcr.org/rohingya-emergency" target="_blank">Quelle: UNHCR</a></p>
           </div>
-
-          <!-- Bild rechts -->
           <div style="flex:0 0 240px; text-align:center;">
             <img src="assets/no-identity-no-rights.png" 
                  alt="Illustration: Person mit Pass darf durch Tür, Person ohne Pass wird von Schranke mit Schild 'No Identity, No Rights' aufgehalten"
@@ -174,18 +153,16 @@
       </div>
     </section>
 
-    <!-- Geschichte (Text links, Video rechts) -->
+    <!-- Geschichte -->
     <section id="geschichte">
       <div class="wrap">
         <h2 class="h2">Eine Geschichte</h2>
         <div class="card story-grid">
-          <!-- Text links -->
           <div>
             <h3>Rohingya-Kinder in Bangladesch</h3>
-            <p>Über 500.000 Rohingya-Kinder leben staatenlos in Flüchtlingslagern. Ohne Staatsangehörigkeit fehlt ihnen der Zugang zu regulärer Bildung, Gesundheitsversorgung und Zukunftsperspektiven. Artikel 15 steht für die Anerkennung ihrer Identität und die Chance auf ein besseres Leben.</p>
-            <p><a href="https://www.unicef.org/emergencies/rohingya-crisis" target="_blank">Quelle: UNICEF</a></p>
+            <p>Über 500.000 Rohingya-Kinder leben staatenlos in Flüchtlingslagern. Ohne Staatsangehörigkeit fehlt ihnen der Zugang zu regulärer Bildung, Gesundheitsversorgung und Zukunftsperspektiven. Artikel 15 steht für die Anerkennung ihrer Identität und die Chance auf ein besseres Leben. 
+            <a href="https://www.unicef.org/emergencies/rohingya-crisis" target="_blank">Quelle: UNICEF</a></p>
           </div>
-          <!-- Video rechts -->
           <div class="story-video">
             <iframe src="https://www.youtube.com/embed/pAy7Vmm0ij0"
                     title="YouTube video player"
@@ -202,10 +179,14 @@
       <div>
         <strong>Quellen & Hinweise</strong>
         <ul style="margin:6px 0 0; padding-left:18px; color:#cbd5e1; font-size:14px; line-height:1.6;">
-          <li><a href="https://www.un.org/depts/german/menschenrechte/aemr.pdf" target="_blank" rel="noopener noreferrer">Allgemeine Erklärung der Menschenrechte (UN, 1948, PDF)</a></li>
-          <li><a href="https://www.unhcr.org/us/stateless-united-states" target="_blank" rel="noopener noreferrer">UNHCR: Stateless People – geschätzt 10 Mio weltweit</a></li>
-          <li><a href="https://www.unhcr.org/dach/de/themen/staatenlosigkeit" target="_blank" rel="noopener noreferrer">UNHCR Deutschland/Österreich/Schweiz – Staatenlosigkeit</a></li>
-          <li><a href="https://www.amnesty.org/en/what-we-do/refugees-asylum-seekers-and-migrants/" target="_blank" rel="noopener noreferrer">Amnesty International – Staatenlose Menschen</a></li>
+          <li><a href="https://www.un.org/depts/german/menschenrechte/aemr.pdf" target="_blank">Allgemeine Erklärung der Menschenrechte (UN, 1948, PDF)</a></li>
+          <li><a href="https://www.unhcr.org/stateless-people" target="_blank">UNHCR – Stateless People (≥4,4 Mio offiziell)</a></li>
+          <li><a href="https://www.unhcr.org/us/stateless-united-states" target="_blank">UNHCR – Stateless in the United States (~10 Mio geschätzt)</a></li>
+          <li><a href="https://www.unhcr.org/dach/de/themen/staatenlosigkeit" target="_blank">UNHCR DACH – Staatenlosigkeit</a></li>
+          <li><a href="https://www.amnesty.org/en/latest/campaigns/2016/05/stateless-people-in-the-dominican-republic/" target="_blank">Amnesty – Dominikanische Republik</a></li>
+          <li><a href="https://www.amnesty.org/en/what-we-do/refugees-asylum-seekers-and-migrants/" target="_blank">Amnesty – Flüchtlinge & Staatenlose</a></li>
+          <li><a href="https://www.unhcr.org/rohingya-emergency" target="_blank">UNHCR – Rohingya Emergency</a></li>
+          <li><a href="https://www.unicef.org/emergencies/rohingya-crisis" target="_blank">UNICEF – Rohingya Crisis</a></li>
         </ul>
       </div>
       <div style="display:flex; gap:10px; align-items:center; justify-content:space-between; flex-wrap:wrap;">
@@ -216,7 +197,6 @@
   </footer>
 
   <script>
-    // Jahr im Footer setzen
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
