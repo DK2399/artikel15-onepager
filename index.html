@@ -4,82 +4,111 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Artikel 15 – Recht auf Staatsangehörigkeit</title>
-  <meta name="description" content="Onepager zu Artikel 15 der Allgemeinen Erklärung der Menschenrechte – Bedeutung, Fakten, Geschichte und Mitmachmöglichkeiten." />
+  <meta name="description" content="Onepager zu Artikel 15 der Allgemeinen Erklärung der Menschenrechte – Bedeutung, Fakten, Geschichte." />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
-    /* Dein CSS bleibt unverändert */
+    :root {
+      --primary: #0A5BD3;
+      --accent:  #E63946;
+      --ink:     #0F172A;
+      --muted:   #475569;
+      --bg:      #F8FAFC;
+      --card:    #FFFFFF;
+      --radius:  18px;
+      --maxw:    1120px;
+    }
+    html { scroll-behavior: smooth; }
+    body { margin:0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji"; color: var(--ink); background: var(--bg); }
+
+    /* Header */
+    header { position: sticky; top:0; z-index:50; background: rgba(248,250,252,0.95); border-bottom:1px solid #e5e7eb; backdrop-filter: saturate(140%) blur(6px); }
+    .nav { max-width: var(--maxw); margin:0 auto; display:flex; align-items:center; gap:16px; padding:12px 20px; }
+    .brand { font-weight:800; color:var(--primary); font-family: Montserrat, sans-serif; letter-spacing: .2px; }
+    .links { margin-left:auto; display:flex; gap:14px; flex-wrap:wrap; }
+    .btn { border:none; border-radius:999px; padding:10px 16px; font-weight:700; cursor:pointer; text-decoration:none; display:inline-block; }
+    .btn-primary { background: var(--primary); color:#fff; transition: background .2s ease, transform .04s ease; }
+    .btn-primary:hover { background:#084bb0; }
+    .btn-primary:active { transform: translateY(1px); }
+
+    /* Hero */
+    .hero { background: linear-gradient(180deg, #f4f7ff 0%, #ffffff 100%); }
+    .hero-inner { max-width: var(--maxw); margin:0 auto; padding: 72px 20px; display:grid; grid-template-columns: 1fr 1fr; gap:32px; align-items:center; }
+    .super { font-weight:800; font-size: clamp(28px, 6vw, 52px); line-height:1.1; font-family: Montserrat, sans-serif; }
+    .sub { font-size: clamp(16px, 2.5vw, 19px); color: var(--muted); margin-top:14px; }
+
+    .passport { background: var(--card); border-radius: var(--radius); padding:18px; box-shadow:0 8px 20px rgba(0,0,0,.08); border:1px solid #e5e7eb; }
+    .passport-top { display:flex; justify-content:space-between; font-size:14px; }
+    .avatar { width:64px; height:64px; border-radius:10px; background:#dbe7ff; display:grid; place-items:center; font-weight:800; color:#1e3a8a; margin-right:12px; }
+
+    /* Sections */
+    section { padding: 64px 20px; }
+    .wrap { max-width: var(--maxw); margin:0 auto; }
+    .h2 { font-family: Montserrat, sans-serif; font-weight:800; font-size: clamp(24px, 4vw, 36px); margin-bottom:10px; }
+    .lead { color: var(--muted); margin-top:6px; max-width: 70ch; }
+
+    .grid-2 { display:grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap:20px; }
+    .grid-4 { display:grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap:20px; }
+
+    .card { background: var(--card); border:1px solid #e5e7eb; border-radius: var(--radius); padding:20px; }
+    .stat { text-align:center; padding:20px; border-radius: 14px; background:#fff; border:1px dashed #dbeafe; display:flex; flex-direction:column; justify-content:center; min-height:140px; }
+    .stat strong { display:block; font-size: clamp(24px, 5vw, 38px); color: var(--accent); }
+
+    .bars { display:grid; gap:10px; margin-top:18px; }
+    .bar { height:14px; background:#e2e8f0; border-radius:999px; position:relative; overflow:hidden; }
+    .bar > i { position:absolute; inset:0; transform: scaleX(var(--v)); transform-origin:left; background: var(--primary); }
+    .bar-label { display:flex; justify-content:space-between; font-size:13px; color:var(--muted); }
+
+    blockquote { margin:0; padding:20px; background:#f1f5f9; border-left:4px solid var(--primary); border-radius:10px; font-style:italic; }
+
+    /* Footer */
+    footer { padding:40px 20px; background:#0b1020; color:#e5e7eb; }
+    footer a { color:#c7d2fe; }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; text-align:center; }
+    }
+    @media (max-width: 768px) {
+      .links { justify-content:center; margin-left:0; }
+      .stat { min-height: auto; }
+    }
   </style>
 </head>
 <body>
-  <!-- Hero, Artikel ... -->
+  <header id="top">
+    <nav class="nav">
+      <div class="brand">Artikel 15</div>
+      <div class="links">
+        <a href="#artikel" class="btn btn-primary">Artikel</a>
+        <a href="#warum" class="btn btn-primary">Warum wichtig?</a>
+        <a href="#geschichte" class="btn btn-primary">Geschichte</a>
+      </div>
+    </nav>
+  </header>
 
-    <!-- Warum wichtig -->
-    <section id="warum">
-      <div class="wrap">
-        <h2 class="h2">Warum ist das wichtig?</h2>
-        <div class="grid-4">
-          <div class="stat">
-            <strong>≥4,4 Mio.</strong>
-            <span>offiziell staatenlos<br><a href="https://www.unhcr.org/stateless-people" target="_blank">UNHCR</a></span>
-          </div>
-          <div class="stat">
-            <strong>~10 Mio.</strong>
-            <span>geschätzt weltweit<br><a href="https://www.unhcr.org/us/stateless-united-states" target="_blank">UNHCR</a></span>
-          </div>
-          <div class="stat">
-            <strong>0</strong>
-            <span>Rechte sind sicher,<br>wenn Identität nicht anerkannt wird.<br><a href="https://www.amnesty.org/en/latest/campaigns/2016/05/stateless-people-in-the-dominican-republic/" target="_blank">Amnesty</a></span>
-          </div>
-          <div class="stat">
-            <strong>3 Bereiche</strong>
-            <span>Bildung, Arbeit, Gesundheit<br><a href="https://www.unhcr.org/dach/de/themen/staatenlosigkeit" target="_blank">UNHCR</a></span>
-          </div>
+  <main>
+    <!-- Hero -->
+    <section id="hero" class="hero">
+      <div class="hero-inner">
+        <div>
+          <h1 class="super">Ohne Staatsangehörigkeit – ohne Rechte.</h1>
+          <p class="sub">Artikel 15 schützt das Recht auf Staatsangehörigkeit und untersagt willkürliche Ausbürgerung.</p>
         </div>
-        <div class="card" style="margin-top:20px;">
-          <strong>Folgen der Staatenlosigkeit</strong>
-          <div class="bars">
-            <div><div class="bar" style="--v:.9"><i></i></div><div class="bar-label"><span>Bildung</span><span>hoch</span></div></div>
-            <div><div class="bar" style="--v:.75"><i></i></div><div class="bar-label"><span>Arbeit</span><span>mittel-hoch</span></div></div>
-            <div><div class="bar" style="--v:.6"><i></i></div><div class="bar-label"><span>Gesundheit</span><span>mittel</span></div></div>
+        <aside class="passport">
+          <div class="passport-top"><strong>ID</strong><span style="color:var(--muted);">Nr. DE-015-2025</span></div>
+          <div style="display:flex; align-items:center; margin-top:10px;">
+            <div class="avatar">ID</div>
+            <strong style="color:var(--accent);">staatenlos</strong>
           </div>
-          <p class="lead" style="font-size:14px;">Daten: <a href="https://www.unhcr.org/stateless-people">UNHCR</a>, <a href="https://www.amnesty.org/en/what-we-do/refugees-asylum-seekers-and-migrants/" target="_blank">Amnesty International</a>.</p>
-        </div>
+        </aside>
       </div>
     </section>
 
-  <footer aria-label="Seitenende">
-    <div class="wrap" style="display:grid; gap:20px;">
-      <div>
-        <strong>Quellen & Hinweise</strong>
-        <ul style="margin:6px 0 0; padding-left:18px; color:#cbd5e1; font-size:14px; line-height:1.6;">
-          <li><a href="https://www.un.org/depts/german/menschenrechte/aemr.pdf" target="_blank" rel="noopener noreferrer">Allgemeine Erklärung der Menschenrechte (UN, 1948, PDF)</a></li>
-          <li><a href="https://www.unhcr.org/us/stateless-united-states" target="_blank" rel="noopener noreferrer">UNHCR: Stateless People – geschätzt 10 Mio weltweit</a></li>
-          <li><a href="https://www.unhcr.org/dach/de/themen/staatenlosigkeit" target="_blank" rel="noopener noreferrer">UNHCR Deutschland/Österreich/Schweiz – Staatenlosigkeit</a></li>
-          <li><a href="https://www.amnesty.org/en/what-we-do/refugees-asylum-seekers-and-migrants/" target="_blank" rel="noopener noreferrer">Amnesty International – Staatenlose Menschen</a></li>
-        </ul>
-      </div>
-      <div style="display:flex; gap:10px; align-items:center; justify-content:space-between; flex-wrap:wrap;">
-        <small>© <span id="year"></span> Artikel 15 – Onepager</small>
-        <small><a href="#top">Nach oben ↑</a></small>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    // Year
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Reveal on scroll (reduced motion aware)
-    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (!prefersReduced) {
-      const obs = new IntersectionObserver((entries) => {
-        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('is-visible'); obs.unobserve(e.target); } });
-      }, { threshold: 0.15 });
-      document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
-    } else {
-      document.querySelectorAll('.reveal').forEach(el => el.classList.add('is-visible'));
-    }
-  </script>
-</body>
-</html>
+    <!-- Artikel 15 -->
+    <section id="artikel">
+      <div class="wrap">
+        <h2 class="h2">Was sagt Artikel 15?</h2>
+        <div class="grid-2">
+          <div class="card"><strong>15(1)</strong><p>Jeder Mensch hat das Recht auf eine Staatsangehörigkeit.</p></div>
+          <div class="card"><strong>15(2)</strong><p>Niemandem darf die Staatsangehörigkeit willkürlich entzogen werden.</p></div>
