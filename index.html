@@ -19,7 +19,7 @@
       --maxw:    1120px;
     }
     html { scroll-behavior: smooth; }
-    body { margin:0; font-family: Inter, sans-serif; color: var(--ink); background: var(--bg); }
+    body { margin:0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial; color: var(--ink); background: var(--bg); }
 
     /* Header */
     header { position: sticky; top:0; z-index:50; background: rgba(248,250,252,0.95); border-bottom:1px solid #e5e7eb; backdrop-filter: saturate(140%) blur(6px); }
@@ -27,15 +27,15 @@
     .brand { font-weight:800; color:var(--primary); font-family: Montserrat, sans-serif; }
     .links { margin-left:auto; display:flex; gap:14px; flex-wrap:wrap; }
     .btn { border:none; border-radius:999px; padding:10px 16px; font-weight:700; cursor:pointer; text-decoration:none; display:inline-block; }
-    .btn-primary { background: var(--primary); color:#fff; transition: background 0.2s ease; }
+    .btn-primary { background: var(--primary); color:#fff; transition: background .2s ease, transform .04s ease; }
     .btn-primary:hover { background:#084bb0; }
+    .btn-primary:active { transform: translateY(1px); }
 
     /* Hero */
     .hero { background: linear-gradient(180deg, #f4f7ff 0%, #ffffff 100%); }
     .hero-inner { max-width: var(--maxw); margin:0 auto; padding: 72px 20px; display:grid; grid-template-columns: 1fr 1fr; gap:32px; align-items:center; }
     .super { font-weight:800; font-size: clamp(28px, 6vw, 52px); line-height:1.1; font-family: Montserrat, sans-serif; }
     .sub { font-size: clamp(16px, 2.5vw, 19px); color: var(--muted); margin-top:14px; }
-
     .passport { background: var(--card); border-radius: var(--radius); padding:18px; box-shadow:0 8px 20px rgba(0,0,0,.08); border:1px solid #e5e7eb; }
     .passport-top { display:flex; justify-content:space-between; font-size:14px; }
     .avatar { width:64px; height:64px; border-radius:10px; background:#dbe7ff; display:grid; place-items:center; font-weight:800; color:#1e3a8a; margin-right:12px; }
@@ -58,6 +58,11 @@
     .bar > i { position:absolute; inset:0; transform: scaleX(var(--v)); transform-origin:left; background: var(--primary); }
     .bar-label { display:flex; justify-content:space-between; font-size:13px; color:var(--muted); }
 
+    /* Story grid (Text links, Video rechts) */
+    .story-grid { display:grid; grid-template-columns: 1fr 1fr; gap:20px; align-items:start; }
+    .story-video { position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:12px; }
+    .story-video iframe { position:absolute; top:0; left:0; width:100%; height:100%; border:0; }
+
     /* Footer */
     footer { padding:40px 20px; background:#0b1020; color:#e5e7eb; }
     footer a { color:#c7d2fe; }
@@ -65,6 +70,9 @@
     /* Responsive */
     @media (max-width: 900px) {
       .hero-inner { grid-template-columns: 1fr; text-align:center; }
+    }
+    @media (max-width: 800px) {
+      .story-grid { grid-template-columns: 1fr; }
     }
     @media (max-width: 768px) {
       .links { justify-content:center; margin-left:0; }
@@ -146,35 +154,34 @@
           <p class="lead" style="font-size:14px;">Daten: <a href="https://www.unhcr.org/stateless-people" target="_blank">UNHCR</a>, <a href="https://www.amnesty.org/en/what-we-do/refugees-asylum-seekers-and-migrants/" target="_blank">Amnesty International</a>.</p>
         </div>
 
-        <!-- Infobox mit Video -->
+        <!-- Infobox (ohne Video) -->
         <div class="card" style="margin-top:20px; background:#f1f5f9; border-left:5px solid var(--primary);">
           <h3 style="margin-top:0;">Haben Staatenlose keine Rechte?</h3>
           <p>Menschenrechte gelten universell – auch ohne Staatsangehörigkeit. Doch in der Praxis fehlt oft die rechtliche Anerkennung durch einen Staat, der diese Rechte garantiert. Das bedeutet: Zugang zu <strong>Bildung</strong>, <strong>Gesundheit</strong>, <strong>Arbeit</strong> oder <strong>Rechtsschutz</strong> ist massiv eingeschränkt.</p>
           <p><strong>Beispiel:</strong> Die <em>Rohingya</em> in Myanmar wurden durch das Staatsangehörigkeitsgesetz von 1982 staatenlos. Seither sind ihre Rechte stark eingeschränkt: Bewegungsfreiheit, Zugang zu Bildung, Gesundheitsversorgung und Arbeit sind massiv limitiert. 
           <a href="https://www.unhcr.org/rohingya-emergency" target="_blank">Quelle: UNHCR</a></p>
-
-          <!-- Eingebettetes YouTube-Video -->
-          <div style="margin-top:16px; position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:12px;">
-            <iframe src="https://www.youtube.com/embed/pAy7Vmm0ij0"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                    style="position:absolute; top:0; left:0; width:100%; height:100%;">
-            </iframe>
-          </div>
         </div>
       </div>
     </section>
 
-    <!-- Geschichte -->
+    <!-- Geschichte (Text links, Video rechts) -->
     <section id="geschichte">
       <div class="wrap">
         <h2 class="h2">Eine Geschichte</h2>
-        <div class="card">
-          <h3>Rohingya-Kinder in Bangladesch</h3>
-          <p>Über 500.000 Rohingya-Kinder leben staatenlos in Flüchtlingslagern. Ohne Staatsangehörigkeit fehlt ihnen der Zugang zu regulärer Bildung, Gesundheitsversorgung und Zukunftsperspektiven. Artikel 15 steht für die Anerkennung ihrer Identität und die Chance auf ein besseres Leben.</p>
-          <p><a href="https://www.unicef.org/emergencies/rohingya-crisis" target="_blank">Quelle: UNICEF</a></p>
+        <div class="card story-grid">
+          <!-- Text links -->
+          <div>
+            <h3>Rohingya-Kinder in Bangladesch</h3>
+            <p>Über 500.000 Rohingya-Kinder leben staatenlos in Flüchtlingslagern. Ohne Staatsangehörigkeit fehlt ihnen der Zugang zu regulärer Bildung, Gesundheitsversorgung und Zukunftsperspektiven. Artikel 15 steht für die Anerkennung ihrer Identität und die Chance auf ein besseres Leben.</p>
+            <p><a href="https://www.unicef.org/emergencies/rohingya-crisis" target="_blank">Quelle: UNICEF</a></p>
+          </div>
+          <!-- Video rechts -->
+          <div class="story-video">
+            <iframe src="https://www.youtube.com/embed/pAy7Vmm0ij0"
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+          </div>
         </div>
       </div>
     </section>
