@@ -26,10 +26,9 @@
     .nav { max-width: var(--maxw); margin:0 auto; display:flex; align-items:center; gap:16px; padding:12px 20px; }
     .brand { font-weight:800; color:var(--primary); font-family: Montserrat, sans-serif; }
     .links { margin-left:auto; display:flex; gap:14px; flex-wrap:wrap; }
-    .links a { text-decoration:none; color: var(--ink); font-weight:600; }
-    .btn { border:none; border-radius:999px; padding:10px 16px; font-weight:700; cursor:pointer; }
-    .btn-primary { background: var(--primary); color:#fff; }
-    .btn-ghost { background: transparent; color: var(--primary); border:2px solid var(--primary); }
+    .btn { border:none; border-radius:999px; padding:10px 16px; font-weight:700; cursor:pointer; text-decoration:none; display:inline-block; }
+    .btn-primary { background: var(--primary); color:#fff; transition: background 0.2s ease; }
+    .btn-primary:hover { background: #084bb0; }
 
     /* Hero */
     .hero { background: linear-gradient(180deg, #f4f7ff 0%, #ffffff 100%); }
@@ -61,10 +60,6 @@
 
     blockquote { margin:0; padding:20px; background:#f1f5f9; border-left:4px solid var(--primary); border-radius:10px; font-style:italic; }
 
-    /* CTA */
-    .cta { display:grid; grid-template-columns: 1fr 1fr; gap:20px; background:#eef4ff; border-radius: var(--radius); padding:24px; }
-    .cta .btn { margin-top:10px; }
-
     /* Footer */
     footer { padding:40px 20px; background:#0b1020; color:#e5e7eb; }
     footer a { color:#c7d2fe; }
@@ -72,7 +67,6 @@
     /* Responsive */
     @media (max-width: 768px) {
       .hero-inner { grid-template-columns: 1fr; text-align:center; }
-      .cta { grid-template-columns: 1fr; }
       .links { justify-content:center; margin-left:0; }
     }
   </style>
@@ -82,10 +76,9 @@
     <nav class="nav">
       <div class="brand">Artikel 15</div>
       <div class="links">
-        <a href="#artikel">Artikel</a>
-        <a href="#warum">Warum wichtig?</a>
-        <a href="#geschichte">Geschichte</a>
-        <a href="#mitmachen" class="btn btn-primary">Mitmachen</a>
+        <a href="#artikel" class="btn btn-primary">Artikel</a>
+        <a href="#warum" class="btn btn-primary">Warum wichtig?</a>
+        <a href="#geschichte" class="btn btn-primary">Geschichte</a>
       </div>
     </nav>
   </header>
@@ -124,9 +117,9 @@
       <div class="wrap">
         <h2 class="h2">Warum ist das wichtig?</h2>
         <div class="grid-3">
-          <div class="stat"><strong>~10 Mio.</strong><span>Menschen weltweit.<br><a href="https://www.unhcr.org/stateless-people" target="_blank">UNHCR</a></span></div>
-          <div class="stat"><strong>0</strong><span>Rechte sind sicher.<br><a href="https://www.amnesty.org/en/what-we-do/rights-of-refugees-and-migrants/stateless-people/" target="_blank">Amnesty</a></span></div>
-          <div class="stat"><strong>3 Bereiche</strong><span>Bildung, Arbeit, Gesundheit.<br><a href="https://www.unhcr.org/dach/de/themen/staatenlosigkeit" target="_blank">UNHCR</a></span></div>
+          <div class="stat"><strong>≥4,4 Mio.</strong><span>offiziell staatenlos<br><a href="https://www.unhcr.org/stateless-people" target="_blank">UNHCR</a></span></div>
+          <div class="stat"><strong>~10 Mio.</strong><span>geschätzt weltweit<br><a href="https://www.unhcr.org/stateless-people" target="_blank">UNHCR</a></span></div>
+          <div class="stat"><strong>3 Bereiche</strong><span>Bildung, Arbeit, Gesundheit<br><a href="https://www.unhcr.org/dach/de/themen/staatenlosigkeit" target="_blank">UNHCR</a></span></div>
         </div>
         <div class="card" style="margin-top:20px;">
           <strong>Folgen der Staatenlosigkeit</strong>
@@ -148,24 +141,6 @@
           <h3>Amina, 12, staatenlos</h3>
           <p>Ohne Dokumente darf Amina keine Schule besuchen. Artikel 15 steht für die Anerkennung ihrer Identität.</p>
           <blockquote>„Das Recht, Rechte zu haben.“ — Hannah Arendt</blockquote>
-        </div>
-      </div>
-    </section>
-
-    <!-- Mitmachen -->
-    <section id="mitmachen">
-      <div class="wrap">
-        <h2 class="h2">So kannst du helfen</h2>
-        <div class="cta">
-          <div>
-            <p class="lead">Informiere, teile und unterstütze Initiativen. Jede Stimme zählt.</p>
-            <a class="btn btn-primary" href="#">Informieren</a>
-            <a class="btn btn-ghost" href="#">Teilen</a>
-          </div>
-          <div class="card">
-            <p><strong>Rechtliche Beratung fördern</strong><br>Hilfe bei Dokumentenbeschaffung.</p>
-            <p><strong>Bildung ermöglichen</strong><br>Programme für Schule & Ausbildung.</p>
-          </div>
         </div>
       </div>
     </section>
