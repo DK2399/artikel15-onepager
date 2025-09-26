@@ -112,3 +112,87 @@
         <div class="grid-2">
           <div class="card"><strong>15(1)</strong><p>Jeder Mensch hat das Recht auf eine Staatsangehörigkeit.</p></div>
           <div class="card"><strong>15(2)</strong><p>Niemandem darf die Staatsangehörigkeit willkürlich entzogen werden.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Warum wichtig -->
+    <section id="warum">
+      <div class="wrap">
+        <h2 class="h2">Warum ist das wichtig?</h2>
+        <div class="grid-4">
+          <div class="stat">
+            <strong>≥4,4 Mio.</strong>
+            <span>offiziell staatenlos<br><a href="https://www.unhcr.org/stateless-people" target="_blank">UNHCR</a></span>
+          </div>
+          <div class="stat">
+            <strong>~10 Mio.</strong>
+            <span>geschätzt weltweit<br><a href="https://www.unhcr.org/us/stateless-united-states" target="_blank">UNHCR</a></span>
+          </div>
+          <div class="stat">
+            <strong>0</strong>
+            <span>Rechte sind sicher,<br>wenn Identität nicht anerkannt wird.<br><a href="https://www.amnesty.org/en/latest/campaigns/2016/05/stateless-people-in-the-dominican-republic/" target="_blank">Amnesty</a></span>
+          </div>
+          <div class="stat">
+            <strong>3 Bereiche</strong>
+            <span>Bildung, Arbeit, Gesundheit<br><a href="https://www.unhcr.org/dach/de/themen/staatenlosigkeit" target="_blank">UNHCR</a></span>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:20px;">
+          <strong>Folgen der Staatenlosigkeit</strong>
+          <div class="bars">
+            <div><div class="bar" style="--v:.9"><i></i></div><div class="bar-label"><span>Bildung</span><span>hoch</span></div></div>
+            <div><div class="bar" style="--v:.75"><i></i></div><div class="bar-label"><span>Arbeit</span><span>mittel-hoch</span></div></div>
+            <div><div class="bar" style="--v:.6"><i></i></div><div class="bar-label"><span>Gesundheit</span><span>mittel</span></div></div>
+          </div>
+          <p class="lead" style="font-size:14px;">Daten: <a href="https://www.unhcr.org/stateless-people" target="_blank">UNHCR</a>, <a href="https://www.amnesty.org/en/what-we-do/refugees-asylum-seekers-and-migrants/" target="_blank">Amnesty International</a>.</p>
+        </div>
+
+        <!-- Infobox -->
+        <div class="card" style="margin-top:20px; background:#f1f5f9; border-left:5px solid var(--primary);">
+          <h3 style="margin-top:0;">Haben Staatenlose keine Rechte?</h3>
+          <p>Menschenrechte gelten universell – auch ohne Staatsangehörigkeit. Doch in der Praxis fehlt oft die rechtliche Anerkennung durch einen Staat, der diese Rechte garantiert. Das bedeutet: Zugang zu <strong>Bildung</strong>, <strong>Gesundheit</strong>, <strong>Arbeit</strong> oder <strong>Rechtsschutz</strong> ist massiv eingeschränkt.</p>
+          <p><strong>Beispiel:</strong> Die <em>Rohingya</em> in Myanmar wurden durch das Staatsangehörigkeitsgesetz von 1982 staatenlos. Seither sind ihre Rechte stark eingeschränkt: Bewegungsfreiheit, Zugang zu Bildung, Gesundheitsversorgung und Arbeit sind massiv limitiert. 
+          <a href="https://www.unhcr.org/rohingya-emergency" target="_blank">Quelle: UNHCR</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Geschichte (belegtes Beispiel) -->
+    <section id="geschichte">
+      <div class="wrap">
+        <h2 class="h2">Eine Geschichte</h2>
+        <div class="card">
+          <h3>Rohingya-Kinder in Bangladesch</h3>
+          <p>Über 500.000 Rohingya-Kinder leben staatenlos in Flüchtlingslagern. Ohne Staatsangehörigkeit fehlt ihnen der Zugang zu regulärer Bildung, Gesundheitsversorgung und Zukunftsperspektiven. Artikel 15 steht für die Anerkennung ihrer Identität und die Chance auf ein besseres Leben.</p>
+          <p><a href="https://www.unicef.org/emergencies/rohingya-crisis" target="_blank">Quelle: UNICEF</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer aria-label="Seitenende">
+    <div class="wrap" style="display:grid; gap:20px;">
+      <div>
+        <strong>Quellen & Hinweise</strong>
+        <ul style="margin:6px 0 0; padding-left:18px; color:#cbd5e1; font-size:14px; line-height:1.6;">
+          <li><a href="https://www.un.org/depts/german/menschenrechte/aemr.pdf" target="_blank" rel="noopener noreferrer">Allgemeine Erklärung der Menschenrechte (UN, 1948, PDF)</a></li>
+          <li><a href="https://www.unhcr.org/us/stateless-united-states" target="_blank" rel="noopener noreferrer">UNHCR: Stateless People – geschätzt 10 Mio weltweit</a></li>
+          <li><a href="https://www.unhcr.org/dach/de/themen/staatenlosigkeit" target="_blank" rel="noopener noreferrer">UNHCR Deutschland/Österreich/Schweiz – Staatenlosigkeit</a></li>
+          <li><a href="https://www.amnesty.org/en/what-we-do/refugees-asylum-seekers-and-migrants/" target="_blank" rel="noopener noreferrer">Amnesty International – Staatenlose Menschen</a></li>
+        </ul>
+      </div>
+      <div style="display:flex; gap:10px; align-items:center; justify-content:space-between; flex-wrap:wrap;">
+        <small>© <span id="year"></span> Artikel 15 – Onepager</small>
+        <small><a href="#top">Nach oben ↑</a></small>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Jahr im Footer setzen
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
